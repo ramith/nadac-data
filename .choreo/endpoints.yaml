@@ -1,0 +1,7 @@
+version: 1.0
+endpoints:
+  - name: nadac-data
+    port: 8090
+    type: GrapQL
+    networkVisibility: Public
+    context: /
