@@ -9,7 +9,7 @@ distribution-version = "2201.6.0"
 
 [[package]]
 org = "Ramith"
-name = "nadac"
+name = "nadacdata"
 version = "1.0.0"
 dependencies = [
 	{org = "ballerina", name = "graphql"},
@@ -20,7 +20,7 @@ dependencies = [
 	{org = "ballerinax", name = "mysql.driver"}
 ]
 modules = [
-	{org = "Ramith", packageName = "nadac", moduleName = "nadac"}
+	{org = "Ramith", packageName = "nadacdata", moduleName = "nadacdata"}
 ]
 
 [[package]]

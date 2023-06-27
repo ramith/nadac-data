@@ -1,9 +1,9 @@
 [package]
 org = "Ramith"
-name = "nadac"
+name = "nadacdata"
 version = "1.0.0"
-export = ["nadac"]
-distribution = "2201.3.1"
+export = ["nadacdata"]
+distribution = "2201.6.0"
 keywords = ["Kind/Sample","Type/Service","Category/Service","Internal/http"]
 icon = "docs/icon.png"
 
