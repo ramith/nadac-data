@@ -3,6 +3,7 @@ import ballerinax/mysql.driver as _;
 import ballerina/graphql;
 import ballerina/sql;
 import ballerina/log;
+import ballerina/os;
 
 # A service representing a network-accessible GraphQL API
 @display {
@@ -84,7 +85,7 @@ type NADACInfo record {
     string asOfDate;
 };
 
-configurable string dbHost = ?;
-configurable string dbUser = ?;
-configurable string dbPassword = ?;
-configurable string dbName = ?;
+configurable string dbHost = os:getEnv("DB_HOST");
+configurable string dbUser = os:getEnv("DB_USERNAME");
+configurable string dbPassword = os:getEnv("DB_PASSWORD");
+configurable string dbName = os:getEnv("DB_NAME");

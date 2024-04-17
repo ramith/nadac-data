@@ -1,11 +1,8 @@
 [package]
-org = "Ramith"
+org = "ramith"
 name = "nadacdata"
 version = "1.0.0"
-export = ["nadacdata"]
-distribution = "2201.6.0"
-keywords = ["Kind/Sample","Type/Service","Category/Service","Internal/http"]
-icon = "docs/icon.png"
+distribution = "2201.8.5"
 
 [build-options]
 observabilityIncluded = true
