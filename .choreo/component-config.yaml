@@ -1,0 +1,32 @@
+apiVersion: core.choreo.dev/v1alpha1
+kind: ComponentConfig
+metadata:
+  # +required Name of the component that this configuration belongs to.
+  name: NADAC GraphQL API
+  # +required Project name of the component that this component belongs to. Cannot be changed after creation.
+  projectName: demo
+  annotations:
+    componentType: Service
+spec:
+  # +optional Build instructions for the component.
+  build:
+    # +required Name of the branch. This is used to identify the corresponding deployment track.
+    branch: main
+  # +optional Incoming connection details for the component (AKA Endpoints).
+  inbound:
+    # +required Unique name for the endpoint. (This name will be used when generating the managed API)
+    - name: NADAC GraphQL API (Ballerina Implementation)
+      # +required Numeric port value that gets exposed via this endpoint
+      port: 8090
+      # +required Type of the traffic this endpoint is accepting. Example: REST, GraphQL, etc.
+      # Allowed values: REST, GraphQL, GRPC, TCP, UDP
+      type: GraphQL
+      # +optional Network level visibility of this endpoint. Defaults to Project
+      # Accepted values: Project|Organization|Public.
+      networkVisibility: Public
+      # +optional Context (base path) of the API that exposed via this endpoint.
+      # This is mandatory if the endpoint type is set to REST or GraphQL.
+      context: /
+      # +optional Path to the schema definition file. Defaults to wild card route if not provided
+      # This is only applicable to REST endpoint types.
+      # The path should be relative to the docker context.
